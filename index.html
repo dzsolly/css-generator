@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Advanced CSS Generator</h1>
+
+    <!-- Breakpoints -->
+    <section>
+        <h2>Breakpoints</h2>
+        <div class="input-group">
+            <label>Mobile width (px)</label>
+            <input id="bp-mobile" type="number" value="480">
+        </div>
+        <div class="input-group">
+            <label>Tablet width (px)</label>
+            <input id="bp-tablet" type="number" value="768">
+        </div>
+        <div class="input-group">
+            <label>Desktop width (px)</label>
+            <input id="bp-desktop" type="number" value="1280">
+        </div>
+        <button class="btn" data-type="breakpoints">Generate Breakpoints</button>
+    </section>
+
+    <!-- Container -->
+    <section>
+        <h2>Container</h2>
+        <div class="input-group">
+            <label>Max-width (px)</label>
+            <input id="container-max" type="number" value="1200">
+        </div>
+        <div class="input-group">
+            <label>Padding (px)</label>
+            <input id="container-padding" type="number" value="20">
+        </div>
+        <div class="input-group">
+            <label>Margin auto (center)</label>
+            <select id="container-center">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        </div>
+        <button class="btn" data-type="container">Generate Container</button>
+    </section>
+
+    <!-- Clamp Generator -->
+    <section>
+        <h2>Clamp Generator</h2>
+        <div class="input-group">
+            <label>Min (rem)</label>
+            <input id="clamp-min" type="number" step="0.1" value="1.2">
+        </div>
+        <div class="input-group">
+            <label>Preferred (vw)</label>
+            <input id="clamp-pref" type="number" step="0.1" value="3">
+        </div>
+        <div class="input-group">
+            <label>Max (rem)</label>
+            <input id="clamp-max" type="number" step="0.1" value="3.5">
+        </div>
+        <button class="btn" data-type="clamp">Generate Clamp</button>
+    </section>
+
+    <!-- Typography -->
+    <section>
+        <h2>Headers (H1–H6)</h2>
+
+        <div class="header-inputs">
+            <div>
+                <label>H1 size (desktop rem)</label>
+                <input id="h1-d" type="number" step="0.1" value="3">
+                <label>H1 size (mobile rem)</label>
+                <input id="h1-m" type="number" step="0.1" value="1.8">
+            </div>
+
+            <div>
+                <label>H2 size (desktop rem)</label>
+                <input id="h2-d" type="number" step="0.1" value="2.4">
+                <label>H2 size (mobile rem)</label>
+                <input id="h2-m" type="number" step="0.1" value="1.6">
+            </div>
+
+            <div>
+                <label>H3 size (desktop rem)</label>
+                <input id="h3-d" type="number" step="0.1" value="1.8">
+                <label>H3 size (mobile rem)</label>
+                <input id="h3-m" type="number" step="0.1" value="1.3">
+            </div>
+        </div>
+
+        <button class="btn" data-type="headers">Generate Headers</button>
+    </section>
+
+    <!-- Grid -->
+    <section>
+        <h2>Grid Generator</h2>
+        <div class="input-group">
+            <label>Columns</label>
+            <input id="grid-cols" type="number" value="3">
+        </div>
+        <div class="input-group">
+            <label>Gap (px)</label>
+            <input id="grid-gap" type="number" value="20">
+        </div>
+        <div class="input-group">
+            <label>Mode</label>
+            <select id="grid-mode">
+                <option value="auto-fit">auto-fit</option>
+                <option value="auto-fill">auto-fill</option>
+            </select>
+        </div>
+        <button class="btn" data-type="grid">Generate Grid</button>
+    </section>
+
+    <!-- Flex -->
+    <section>
+        <h2>Flex Generator</h2>
+        <div class="input-group">
+            <label>Direction</label>
+            <select id="flex-dir">
+                <option value="row">row</option>
+                <option value="column">column</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label>Justify content</label>
+            <select id="flex-justify">
+                <option>center</option>
+                <option>flex-start</option>
+                <option>flex-end</option>
+                <option>space-between</option>
+                <option>space-around</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label>Align items</label>
+            <select id="flex-align">
+                <option>center</option>
+                <option>flex-start</option>
+                <option>flex-end</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label>Gap (px)</label>
+            <input id="flex-gap" type="number" value="20">
+        </div>
+        <button class="btn" data-type="flex">Generate Flex</button>
+    </section>
+
+    <h2>Generated CSS</h2>
+    <textarea id="result"></textarea>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
