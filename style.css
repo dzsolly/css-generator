@@ -78,3 +78,48 @@ textarea {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap:16px;
 }
+
+.reset-btn {
+    background:#ff4a4a;
+    margin-top:15px;
+}
+
+.reset-btn:hover {
+    background:#d83a3a;
+}
+
+/* --- RESPONSIVE LAYOUT --- */
+
+/* Mobil (max 480px) */
+@media (max-width: 480px) {
+    body {
+        padding:20px;
+    }
+    .container {
+        padding:20px;
+        max-width:100%;
+    }
+    h1 {
+        font-size:1.6rem;
+    }
+    h2 {
+        font-size:1.2rem;
+    }
+    textarea {
+        height:150px;
+    }
+    .header-inputs {
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+    }
+    .input-group {
+        display:flex;
+        flex-direction:column;
+    }
+}
+
+/* Tablet (481px – 1024px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .container {
+        max
