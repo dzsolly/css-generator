@@ -95,6 +95,41 @@ function generateFlex() {
 `.trim());
 }
 
+/* RESET */
+function resetAll() {
+    // textarea ürítése
+    document.getElementById('result').value = "";
+
+    // minden input visszaállítása az alapértékre
+    document.getElementById('bp-mobile').value = 480;
+    document.getElementById('bp-tablet').value = 768;
+    document.getElementById('bp-desktop').value = 1280;
+
+    document.getElementById('container-max').value = 1200;
+    document.getElementById('container-padding').value = 20;
+    document.getElementById('container-center').value = "yes";
+
+    document.getElementById('clamp-min').value = 1.2;
+    document.getElementById('clamp-pref').value = 3;
+    document.getElementById('clamp-max').value = 3.5;
+
+    document.getElementById('h1-d').value = 3;
+    document.getElementById('h1-m').value = 1.8;
+    document.getElementById('h2-d').value = 2.4;
+    document.getElementById('h2-m').value = 1.6;
+    document.getElementById('h3-d').value = 1.8;
+    document.getElementById('h3-m').value = 1.3;
+
+    document.getElementById('grid-cols').value = 3;
+    document.getElementById('grid-gap').value = 20;
+    document.getElementById('grid-mode').value = "auto-fit";
+
+    document.getElementById('flex-dir').value = "row";
+    document.getElementById('flex-justify').value = "center";
+    document.getElementById('flex-align').value = "center";
+    document.getElementById('flex-gap').value = 20;
+}
+
 /* EVENT DISPATCHER */
 document.querySelectorAll(".btn").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -105,5 +140,6 @@ document.querySelectorAll(".btn").forEach(btn => {
         if (type === "headers") generateHeaders();
         if (type === "grid") generateGrid();
         if (type === "flex") generateFlex();
+        if (type === "reset") resetAll();
     });
 });
